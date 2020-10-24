@@ -1,28 +1,28 @@
 
-INSERT INTO passportdb
-  (authorized_users)
+INSERT INTO authorized_users
+  (user_id, password)
 VALUES
   ("dr_strange", "password"),
+  ("lorem_ipsum", "abc1234"),
+  ("dolor_amet", "4321dcba");
+
+
+INSERT INTO scheduled_doctors
+  (first_name, last_name, datetime_req)
+VALUES
+  ("Lorem", "Ipsum", "2020-11-15 10:10:10"),
+  ("Dolor", "Amet", "2020-12-15 09:10:10"),
+  ("Consectetur", "Sed", "2020-11-25 07:10:10");
+
+
+INSERT INTO selected_doctors
+  (first_name, last_name, practice, specialties, insurance)
+VALUES
+"Lorem",
+"Ipsum",
+"2020-11-15 10:10:10"
+),
+("Dolor", "Amet", "2020-12-15 09:10:10"),
+("Consectetur", "Sed", "2020-11-25 07:10:10");
+
   
-
-INSERT INTO role
-  (titleid, title, salary, department_id)
-VALUES
-  (1, "sales lead", 100, 1),
-  (2, "salesperson", 80, 1),
-  (3, "lead engineer", 100, 2),
-  (4, "software engineer", 90, 2),
-  (5, "accountant", 70, 3),
-  (6, "legal team lead", 110, 4),
-  (7, "lawyer", 100, 4);
-
-INSERT INTO employee
-  (first_name, last_name, titleid, manager_id)
-VALUES
-  ("Lorem", "Ipsum", 1, NULL),
-  ("Dolor", "Amet", 3, NULL),
-  ("Consectetur", "Sed", 6, NULL),
-  ("Eiusmod", "Tempor", 5, NULL),
-  ("Incididunt", "Labore", 2, 1),
-  ("Finibus", "Bonorum", 4, 3),
-  ("Malorum", "Voluptatem", 7, 6);
