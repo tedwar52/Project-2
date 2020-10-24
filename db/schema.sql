@@ -8,6 +8,8 @@ CREATE TABLE authorized_users
 (
         id INT NOT NULL
         AUTO_INCREMENT,
+        firstName VARCHAR
+        (100),
     user_id VARCHAR
         (100),
     password VARCHAR
@@ -36,13 +38,11 @@ CREATE TABLE authorized_users
     first_name VARCHAR
                         (100) NOT NULL,
     last_name VARCHAR
-                        (100) NOT NULL,
-    practice
-                        (255) VARCHAR NOT NULL,
-    specialties
-                        (255) VARCHAR NOT NULL,
-    insurance
-                        (255) VARCHAR NOT NULL,
+                        (100) NOT NULL,    
+    specialties VARCHAR
+                        (255)  NOT NULL,
+    insurance VARCHAR
+                        (255)  NOT NULL,
     PRIMARY KEY
                         (id)
 );
