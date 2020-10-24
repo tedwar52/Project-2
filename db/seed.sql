@@ -16,13 +16,13 @@ VALUES
 
 
 INSERT INTO selected_doctors
-  (first_name, last_name, practice, specialties, insurance)
+  (first_name, last_name, specialties, insurance)
 VALUES
-"Lorem",
+("Lorem",
 "Ipsum",
-"2020-11-15 10:10:10"
+"primary care", "United Healthcare"
 ),
-("Dolor", "Amet", "2020-12-15 09:10:10"),
-("Consectetur", "Sed", "2020-11-25 07:10:10");
+("Dolor", "Amet", "psychiatrist", "Aetna"),
+("Consectetur", "Finibus", "psychologist", "1199 SEIU");
 
   
