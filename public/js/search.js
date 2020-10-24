@@ -3,4 +3,14 @@ $(document).ready(() => {
     const criteria1 = $("input#search1");
     const criteria2 = $("input#search2");
     const criteria3 = $("input#search3");
+
+    searchForm.on("submit", event => {
+        event.preventDefault();
+        const userData = {
+            search1: criteria1.val().trim(),
+            search2: criteria2.val().trim(),
+            search3: criteria3.val().trim()
+        };
+    });
+    
 })
