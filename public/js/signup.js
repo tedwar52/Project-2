@@ -4,14 +4,18 @@ $(document).ready(() => {
   const emailInput = $("input#email-input");
   const passwordInput = $("input#password-input");
   const firstNameInput = $("input#firstName-input");
-  const lastNameInput = $("input#lastName-input")
+  const lastNameInput = $("input#lastName-input");
+  const phoneInput = $("input#phone-input");
 
   // When the signup button is clicked, we validate the email and password are not blank
+
+  // copy to create appointment schedule.
   signUpForm.on("submit", event => {
     event.preventDefault();
     const userData = {
       firstName: firstNameInput.val().trim(),
       lastName: lastNameInput.val().trim(),
+      phone: phoneInput.val().trim(),
       email: emailInput.val().trim(),
       password: passwordInput.val().trim()
     };
@@ -20,19 +24,21 @@ $(document).ready(() => {
       return;
     }
     // If we have an email and password, run the signUpUser function
-    signUpUser(userData.firstName, userData.lastName, userData.email, userData.password);
+    signUpUser(userData.firstName, userData.lastName, userData.phone, userData.email, userData.password);
     firstNameInput.val("");
     lastNameInput.val().trim();
+    phoneInput.val("");
     emailInput.val("");
     passwordInput.val("");
   });
 
   // Does a post to the signup route. If successful, we are redirected to the members page
   // Otherwise we log any errors
-  function signUpUser(firstName, lastName, email, password) {
+  function signUpUser(firstName, lastName, phone, email, password) {
     $.post("/api/signup", {
       firstName: firstName,
       lastName: lastName,
+      phone: phone,
       email: email,
       password: password
     })
