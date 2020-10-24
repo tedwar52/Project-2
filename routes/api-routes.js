@@ -23,7 +23,7 @@ module.exports = function (app) {
     db.User.create({
       firstName: req.body.firstName,
       lastName: req.body.lastName,
-      phone: req.user.phone,
+      phone: req.body.phone,
       email: req.body.email,
       password: req.body.password
     })
@@ -58,5 +58,6 @@ module.exports = function (app) {
       });
     }
   });
+
 
 };

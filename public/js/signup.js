@@ -26,7 +26,7 @@ $(document).ready(() => {
     // If we have an email and password, run the signUpUser function
     signUpUser(userData.firstName, userData.lastName, userData.phone, userData.email, userData.password);
     firstNameInput.val("");
-    lastNameInput.val().trim();
+    lastNameInput.val().trim("");
     phoneInput.val("");
     emailInput.val("");
     passwordInput.val("");
