@@ -67,6 +67,12 @@ module.exports = function (app) {
   app.get("/api/doctors", function (req, res) {
     console.log("testApiDoctors")
     console.log(req.body)
+    db.Doctor.findAll({
+
+    })
+      .then(function (dbDoctor) {
+        res.json(dbDoctor);
+      });
 
   });
 
@@ -78,6 +84,12 @@ module.exports = function (app) {
   app.get("/api/doctor_data", function (req, res) {
     console.log("testApiDoctor_Data")
     console.log(req.body)
+    db.Doctor.findAll({
+
+    })
+      .then(function (dbDoctor) {
+        res.json(dbDoctor);
+      });
 
   });
 
@@ -91,9 +103,11 @@ module.exports = function (app) {
       // Otherwise send back the user's email and id
       // Sending back a password, even a hashed password, isn't a good idea
       res.json({
+
         firstName: req.doctor.firstName,
         id: req.doctor.id
       });
+      console.log("testJSONResponse");
     }
   });
 

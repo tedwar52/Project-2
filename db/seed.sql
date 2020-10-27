@@ -1,3 +1,5 @@
+USE passportdb;
+
 INSERT INTO User
   (firstName, lastName, phone, email, password)
 VALUES
