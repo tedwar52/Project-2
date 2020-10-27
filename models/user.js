@@ -24,10 +24,6 @@ module.exports = function (sequelize, DataTypes) {
         isEmail: true
       }
     },
-    userid: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
     // The password cannot be null
     password: {
       type: DataTypes.STRING,
