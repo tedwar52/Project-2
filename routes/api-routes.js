@@ -67,11 +67,10 @@ module.exports = function (app) {
   app.get("/api/doctors", function (req, res) {
     console.log("testApiDoctors")
     console.log(req.body)
-    db.Doctor.findAll({
-
-    })
+    db.Doctor.findAll()
       .then(function (dbDoctor) {
-        res.json(dbDoctor);
+        console.log(dbDoctor);
+        // res.json(dbDoctor);
       });
 
   });
