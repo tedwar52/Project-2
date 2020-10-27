@@ -21,7 +21,7 @@ $(document).ready(() => {
         $.get("/api/doctors", function (data) {
             console.log("Doctors", data);
             doctors = data;
-            if (!posts || !doctors.length) {
+            if (!doctors || !doctors.length) {
                 displayEmpty();
             }
             else {
@@ -47,6 +47,7 @@ $(document).ready(() => {
 
     // This function constructs a post's HTML
     function createNewRow(doctor) {
+        console.log('testCreateNewRow')
         var newPostCard = $("<div>");
         newPostCard.addClass("card");
         var newPostCardHeading = $("<div>");

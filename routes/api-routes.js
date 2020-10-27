@@ -66,6 +66,7 @@ module.exports = function (app) {
 
   app.get("/api/doctors", function (req, res) {
     console.log("testApiDoctors")
+    console.log(req.body)
 
   });
 
@@ -76,11 +77,13 @@ module.exports = function (app) {
 
   app.get("/api/doctor_data", function (req, res) {
     console.log("testApiDoctor_Data")
+    console.log(req.body)
 
   });
 
 
   app.get("/api/doctor_data", (req, res) => {
+    console.log(req.body)
     if (!req.doctor) {
       // The user is not logged in, send back an empty object
       res.json({});
