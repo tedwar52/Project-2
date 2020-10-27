@@ -74,5 +74,24 @@ module.exports = function (app) {
 
   });
 
+  app.get("/api/doctor_data", function (req, res) {
+    console.log("testApiDoctor_Data")
+
+  });
+
+
+  app.get("/api/doctor_data", (req, res) => {
+    if (!req.doctor) {
+      // The user is not logged in, send back an empty object
+      res.json({});
+    } else {
+      // Otherwise send back the user's email and id
+      // Sending back a password, even a hashed password, isn't a good idea
+      res.json({
+        firstName: req.doctor.firstName,
+        id: req.doctor.id
+      });
+    }
+  });
 
 };
