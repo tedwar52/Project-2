@@ -14,6 +14,45 @@ module.exports = function (app) {
     });
   });
 
+  app.get("/api/users", function (req, res) {
+    console.log("testApiUsers");
+    db.User.findAll({})
+      .then(function (dbUser) {
+        res.json(dbUser);
+      });
+  });
+
+  app.get("/api/doctors", function (req, res) {
+    console.log("testApiDoctors")
+    db.Doctor.findAll({})
+      .then(function (dbDoctor) {
+        res.json(dbDoctor);
+      });
+  });
+
+  app.get("/api/schedules", function (req, res) {
+    console.log("testApiSchedules")
+    db.Schedule.findAll({})
+      .then(function (dbSchedule) {
+        res.json(dbSchedule);
+      });
+  });
+
+
+  // app.get("/api/posts/category/:category", function (req, res) {
+  //   db.Post.findAll({
+  //     where: {
+  //       category: req.params.category
+  //     }
+  //   })
+  //     .then(function (dbPost) {
+  //       res.json(dbPost);
+  //     });
+  // });
+
+  // API call that correspondes to public/js/folder
+  // see exercise 12 - make correlation
+
   // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
   // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
   // otherwise send back an error
