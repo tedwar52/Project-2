@@ -12,5 +12,19 @@ $(document).ready(() => {
             search3: criteria3.val().trim()
         };
     });
-    
+
+    // Code to be used to generate results on page.
+    // // Getting the initial list of posts
+    // getPosts();
+    // // InitializeRows handles appending all of our constructed post HTML inside
+    // // blogContainer
+    // function initializeRows() {
+    //     blogContainer.empty();
+    //     var postsToAdd = [];
+    //     for (var i = 0; i < posts.length; i++) {
+    //         postsToAdd.push(createNewRow(posts[i]));
+    //     }
+    //     blogContainer.append(postsToAdd);
+    // }
+
 })
