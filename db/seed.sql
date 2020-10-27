@@ -1,8 +1,8 @@
 INSERT INTO User
-  (firstName, lastName, phone, email, user_id, password)
+  (firstName, lastName, phone, email, password)
 VALUES
-  ("Stephen", "Strange", "212-517-3380", "DStrange@gmail.com", "dr_strange", "password"),
-  ("Lorem", "Ipsum", "212-328-1534", "LIpsum@gmail.com", "lorem_ipsum", "abc1234");
+  ("Stephen", "Strange", "212-517-3380", "DStrange@gmail.com", "password"),
+  ("Lorem", "Ipsum", "212-328-1534", "LIpsum@gmail.com", "abc1234");
 
 
 INSERT INTO Doctor
