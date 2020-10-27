@@ -13,24 +13,24 @@ $(document).ready(() => {
         };
     });
 
-    function getPosts(category) {
-        // var categoryString = category || "";
-        // if (categoryString) {
-        //     categoryString = "/category/" + categoryString;
-        // }
-        $.get("/api/doctors", function (data) {
-            console.log("Doctors", data);
-            doctors = data;
-            if (!doctors || !doctors.length) {
-                displayEmpty();
-            }
-            else {
-                initializeRows();
-            }
-        });
-    }
 
-    getPosts();
+    // var categoryString = category || "";
+    // if (categoryString) {
+    //     categoryString = "/category/" + categoryString;
+    // }
+    $.get("/api/doctor_data", function (data) {
+        console.log("Doctors", data);
+        doctors = data;
+        if (!doctors || !doctors.length) {
+            displayEmpty();
+        }
+        else {
+            initializeRows();
+        }
+    });
+
+
+    // getPosts();
 
     var doctorContainer = $(".doctor-container");
     var doctors;
@@ -93,7 +93,7 @@ $(document).ready(() => {
         doctorContainer.empty();
         var messageH2 = $("<h2>");
         messageH2.css({ "text-align": "center", "margin-top": "50px" });
-        messageH2.html("No posts yet for this category, navigate <a href='/cms'>here</a> in order to create a new post.");
+        messageH2.html("No doctor data.");
         doctorContainer.append(messageH2);
     }
 })

@@ -28,6 +28,7 @@ module.exports = function (app) {
       password: req.body.password
     })
       .then(() => {
+
         res.redirect(307, "/api/login");
       })
       .catch(err => {
@@ -80,21 +81,29 @@ module.exports = function (app) {
 
   });
 
-  app.get("/api/doctor_data", function (req, res) {
-    console.log("testApiDoctor_Data")
-    console.log(req.body)
-    db.Doctor.findAll({
+  // app.get("/api/doctor_data", function (req, res) {
+  //   console.log("testApiDoctor_Data")
+  //   // console.log({ db });
+  //   // new db.Doctor()
+  //   //   .findAll()
+  //   //   .then(dbDoctor => {
+  //   //     console.log(dbDoctor);
+  //   //     // res.json(dbDoctor);
+  //   //   });
+  //   // console.log(req.body)
+  //   db.Doctor.findAll({
 
-    })
-      .then(function (dbDoctor) {
-        res.json(dbDoctor);
-      });
+  //   })
+  //     .then(function (dbDoctor) {
+  //       res.json(dbDoctor);
+  //     });
 
-  });
+  // });
 
 
   app.get("/api/doctor_data", (req, res) => {
-    console.log(req.body)
+    // console.log(req.body)
+    console.log("testApiDoctorData_body")
     if (!req.doctor) {
       // The user is not logged in, send back an empty object
       res.json({});
