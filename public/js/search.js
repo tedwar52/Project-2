@@ -5,6 +5,7 @@ $(document).ready(() => {
     const criteria3 = $("input#search3");
 
     searchForm.on("submit", event => {
+        console.log("testSubmit1")
         event.preventDefault();
         const userData = {
             search1: criteria1.val().trim(),
@@ -12,20 +13,19 @@ $(document).ready(() => {
             search3: criteria3.val().trim()
         };
         doctorSearch(userData);
+        console.log("testSubmit2")
     });
 
     // var categoryString = category || "";
     // if (categoryString) {
     //     categoryString = "/category/" + categoryString;
     // }
-    let doctorSearch = (userData) => $.get("/api/doctor_data/:description", function (req, res, data) {
+    let doctorSearch = (userData) => $.get("/api/doctor_data/" + userData.search1, function (data) {
 
-
-        let description = req.params.description;
-        console.log("testDescription")
-        console.log(description);
-
+        console.log("testDescription");
+        console.log(userData.search1);
         console.log("Doctors", data);
+
         doctors = data;
         if (!doctors || !doctors.length) {
             displayEmpty();

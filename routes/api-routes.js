@@ -81,14 +81,14 @@ module.exports = function (app) {
 
   });
 
-  app.get("/api/doctor_data", function (req, res) {
+  app.get("/api/doctor_data/:userData?", function (req, res) {
     console.log("testApiDoctor_Data")
-    console.log(req.body.query)
-    console.log(req.body)
+    console.log(req.params.orgName)
+    console.log(req.params)
 
     db.Doctor.findAll({
       where: {
-        orgName: '%' + req.body.query + '%'
+        orgName: '%' + req.params.query + '%'
       }
     })
       .then(function (dbDoctor) {
