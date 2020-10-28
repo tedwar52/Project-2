@@ -20,29 +20,30 @@
   <nav class="breadcrumb is-centered is-medium" aria-label="breadcrumbs">
     <ul>
       <li><a href="index.html">About Us</a></li>
-      <li><a href="login.html">Log In</a></li>
       <li class="is-active"><a href="search.html" aria-current="page">Search</a></li>
       <li><a href="#">Schedule</a></li>
+      <li><a href="/logout">Log Out</a></li>
     </ul>
   </nav>
-  <div class="container">
-    <div class="row">
+  <div class="field">
+    <div class="notification is-info">
       <div class="col-md-6 col-md-offset-3">
-        <h2>Search Critera</h2>
+        <h2 class="title is-3 text">Search Critera</h2>
         <form class="search">
           <div class="form-group">
-            <label for="exampleInputfirstName1">First Search</label>
-            <input class="form-control" id="search1" placeholder="Search">
+            <label class="label text" for="exampleInputfirstName1">First Search</label>
+            <input class="input" id="search1" placeholder="Search">
           </div>
           <div class="form-group">
-            <label for="exampleInputlastName1">Second Search</label>
-            <input class="form-control" id="search2" placeholder="Search">
+            <label class="label text" for="exampleInputlastName1">Second Search</label>
+            <input class="input" id="search2" placeholder="Search">
           </div>
           <div class="form-group">
-            <label for="exampleInputEmail1">Third Search</label>
-            <input class="form-control" id="search3" placeholder="Search">
+            <label class="label text" for="exampleInputEmail1">Third Search</label>
+            <input class="input" id="search3" placeholder="Search">
           </div>
-          <button type="submit" class="btn btn-default" id="doctorSearch">Find a Doctor!</button>
+          <button type="submit" id="submitBtn" class="button is-dark is-medium" id="doctorSearch">Find a
+            Doctor!</button>
         </form>
         <div id="results">
 

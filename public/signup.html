@@ -20,13 +20,13 @@
   <nav class="breadcrumb is-centered is-medium" aria-label="breadcrumbs">
     <ul>
       <li><a href="index.html">About Us</a></li>
-      <li><a href="login.html">Log In</a></li>
       <li><a href="search.html">Search</a></li>
       <li><a href="#">Schedule</a></li>
+      <li><a href="/logout">Log Out</a></li>
     </ul>
   </nav>
   <div class="field">
-    <div class="row3">
+    <div class="notification is-info">
       <div class="col-md-6 col-md-offset-3">
         <h2 class="title is-3 text">Sign Up Form</h2>
         <form class="signup">
@@ -54,7 +54,7 @@
             <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
             <span class="sr-only">Error:</span> <span class="msg"></span>
           </div>
-          <button type="submit" class="button is-dark is-medium">Sign Up</button>
+          <button type="submit" id="submitBtn" class="button is-dark is-medium">Sign Up</button>
         </form>
         <br />
         <p class="subtitle is-6 text">Or log in <a href="/login">here</a></p>

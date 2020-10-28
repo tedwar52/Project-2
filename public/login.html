@@ -20,13 +20,13 @@
   <nav class="breadcrumb is-centered is-medium" aria-label="breadcrumbs">
     <ul>
       <li><a href="index.html">About Us</a></li>
-      <li class="is-active"><a href="login.html" aria-current="page">Log In</a></li>
       <li><a href="search.html">Search</a></li>
       <li><a href="#">Schedule</a></li>
+      <li><a href="/logout">Log Out</a></li>
     </ul>
   </nav>
   <div class="field">
-    <div class="row2">
+    <div class="is-fluid notification is-info">
       <div class="col-md-6 col-md-offset-3">
         <h2 class="title is-3 text">Login Form</h2>
         <form class="login">
@@ -38,7 +38,7 @@
             <label class="label text" for="exampleInputPassword1">Password</label>
             <input type="password" class="input" id="password-input" placeholder="Password">
           </div>
-          <button type="submit" class="button is-dark is-medium">
+          <button type="submit" id="submitBtn" class="button is-dark is-medium">
             Login
           </button>
         </form>
