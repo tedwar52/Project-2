@@ -83,6 +83,8 @@ module.exports = function (app) {
 
   app.get("/api/doctor_data", function (req, res) {
     console.log("testApiDoctor_Data")
+    console.log(req.body.query)
+    console.log(req.body)
 
     db.Doctor.findAll({
       where: {

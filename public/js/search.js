@@ -11,14 +11,20 @@ $(document).ready(() => {
             search2: criteria2.val().trim(),
             search3: criteria3.val().trim()
         };
-        doctorSearch;
+        doctorSearch(userData);
     });
 
     // var categoryString = category || "";
     // if (categoryString) {
     //     categoryString = "/category/" + categoryString;
     // }
-    let doctorSearch = $.get("/api/doctor_data", function (data) {
+    let doctorSearch = (userData) => $.get("/api/doctor_data/:description", function (req, res, data) {
+
+
+        let description = req.params.description;
+        console.log("testDescription")
+        console.log(description);
+
         console.log("Doctors", data);
         doctors = data;
         if (!doctors || !doctors.length) {
