@@ -1,0 +1,47 @@
+@charset "utf-8";
+/*@import "../node_modules/bulma/bulma.sass"; */
+
+@import url('http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext');
+
+/*starter code*/
+form.signup,
+form.login,
+form.search {
+  margin-top: 50px; }
+
+/*general formatting*/
+.container{
+    padding: 10px;
+    margin: 25px;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+}
+.row {
+  padding: 10px;
+  height: 300px;
+  margin: 25px;
+}
+.row2 {
+    padding: 10px;
+    height: 360px;
+    margin: 25px;
+    background-color: purple;
+}
+.row3 {
+    padding: 10px;
+    height: 560px;
+    margin: 25px;
+    background-color: hotpink;
+}
+.box {
+    padding: 10px;
+    margin: 5px; 
+    height: 260px;
+}
+.text {
+    color: white;
+}
+

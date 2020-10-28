@@ -5,31 +5,29 @@
     <title>Passport Authentication</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css"> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"> -->
     <link href="stylesheets/css.css" rel="stylesheet">
 </head>
 
 <body>
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-            </div>
+    <div class="hero is-medium is-dark">
+        <div class="hero-body">
+            <h1 class="title is-1">
+                Doctor's Connect
+            </h1>
         </div>
+    </div>
+    <nav class="breadcrumb is-centered is-medium" aria-label="breadcrumbs">
+        <ul>
+            <li class="is-active"><a href="#" aria-current="page">About Us</a></li>
+            <li><a href="login.html">Log In</a></li>
+            <li><a href="search.html">Search</a></li>
+            <li><a href="#">Schedule</a></li>
+        </ul>
     </nav>
     <div class="container">
-        <div class="hero is-medium">
-            <div class="column is-three-fifths">
-                <h1 class="title is-1" class="box ">Doctor's Connect</h1>
-            </div>
-        </div>
-        <div class="about">
-            <div class="column is-three-fifths">
-                <h3 class="title is-3">About Us</h3>
-            </div>
-        </div>
         <div class="row grid-container">
-            <div class="col-6">
+            <div class="col-4">
                 <div class="grid-child box">
                     <p class="subtitle is-5">
                         Offer the best diagnosis for your patient by finding other health care professionals across the
@@ -37,17 +35,7 @@
                     </p>
                 </div>
             </div>
-            <div class="col-6">
-                <div class="grid-child box">
-                    <p class="subtitle is-5">
-                        testing... put an image here
-                    </p>
-                </div>
-            </div>
-
-        </div>
-        <div class="row grid-container">
-            <div class="col-6">
+            <div class="col-4">
                 <div class="grid-child box">
                     <p class="subtitle is-5">
                         Get answers quickly. Utilize our scheduling feature to talk with other doctors as soon as
@@ -55,16 +43,7 @@
                     </p>
                 </div>
             </div>
-            <div class="col-6">
-                <div class="grid-child box">
-                    <p class="subtitle is-5">
-                        put image here
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="row grid-container">
-            <div class="col-6">
+            <div class="col-4">
                 <div class="grid-child box">
                     <p class="subtitle is-5">
                         Keep calm and safe. Our log in is secure so that our database only includes other healthcare
@@ -72,26 +51,27 @@
                     </p>
                 </div>
             </div>
-            <div class="col-6">
-                <div class="grid-child box">
-                    <p class="subtitle is-5">
-                        put image here
-                    </p>
+        </div>
+        <div>
+            <div>
+                <div class="column">
+                    <a href="/signup.html" class="button is-dark is-large is-fullwidth" id="signup">Sign
+                        Up</a>
                 </div>
             </div>
         </div>
-        <div>
-            <div class="column">
-                <a href="/signup.html" class="button is-primary is-large is-light is-fullwidth" id="signup">Sign Up</a>
-            </div>
-        </div>
 
-        <!--<p>Proceed to our secure log in <a href="/login">here</a></p> -->
-
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                <strong>Doctor's Connect</strong> by <a href="#">Jesse</a>, <a href="#">Taylor</a>, and <a
+                    href="#">Tristan</a>.
+            </p>
+        </div>
+    </footer>
 
 </body>
 

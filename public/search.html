@@ -5,16 +5,25 @@
   <title>Passport Authentication Sign Up</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
-  <link href="stylesheets/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  <link href="stylesheets/index.css" rel="stylesheet">
 </head>
 
 <body>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-      </div>
+  <div class="hero is-medium is-dark">
+    <div class="hero-body">
+      <h1 class="title is-1">
+        Doctor's Connect
+      </h1>
     </div>
+  </div>
+  <nav class="breadcrumb is-centered is-medium" aria-label="breadcrumbs">
+    <ul>
+      <li><a href="index.html">About Us</a></li>
+      <li><a href="login.html">Log In</a></li>
+      <li class="is-active"><a href="search.html" aria-current="page">Search</a></li>
+      <li><a href="#">Schedule</a></li>
+    </ul>
   </nav>
   <div class="container">
     <div class="row">
@@ -33,11 +42,17 @@
             <label for="exampleInputEmail1">Third Search</label>
             <input class="form-control" id="search3" placeholder="Search">
           </div>
-          <button type="submit" class="btn btn-default">Find a Doctor!</button>
+          <button type="submit" class="btn btn-default" id="doctorSearch">Find a Doctor!</button>
         </form>
         <div id="results">
 
         </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <h2>Doctors <span class="doctor-name"></span></h2>
+        <br />
       </div>
     </div>
   </div>
@@ -46,5 +61,13 @@
   <script type="text/javascript" src="js/search.js"></script>
 
 </body>
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong>Doctor's Connect</strong> by <a href="#">Jesse</a>, <a href="#">Taylor</a>, and <a href="#">Tristan</a>.
+    </p>
+  </div>
+</footer>
 
 </html>

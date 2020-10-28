@@ -7703,7 +7703,8 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   padding: 3rem 1.5rem 6rem; }
 
 form.signup,
-form.login {
+form.login,
+form.signup {
   margin-top: 50px; }
 
 .container {

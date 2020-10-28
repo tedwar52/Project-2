@@ -12,5 +12,11 @@ $(document).ready(() => {
             search3: criteria3.val().trim()
         };
     });
-    
+
+    // to display doctor table data
+    // $.get("/api/doctor_data").then(data => {
+    //     console.log("displayingUser_Data")
+    //     $(".doctor-name").text(data.firstName);
+    // });
+
 })

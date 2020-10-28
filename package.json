@@ -9,7 +9,7 @@
     "lint": "eslint --quiet .",
     "fix": "eslint --fix .",
     "watch": "nodemon server.js",
-    "sass": "node-sass sass/mystyle.scss public/stylesheets/style.css"
+    "sass": "node-sass sass/mystyle.scss public/stylesheets/css.css"
   },
   "keywords": [],
   "author": "",

@@ -1,28 +1,24 @@
-
-INSERT INTO authorized_users
-  (user_id, password)
+INSERT INTO User
+  (firstName, lastName, phone, email, password)
 VALUES
-  ("dr_strange", "password"),
-  ("lorem_ipsum", "abc1234"),
-  ("dolor_amet", "4321dcba");
+  ("Stephen", "Strange", "212-517-3380", "DStrange@gmail.com", "password"),
+  ("Lorem", "Ipsum", "212-328-1534", "LIpsum@gmail.com", "abc1234");
 
 
-INSERT INTO scheduled_doctors
-  (first_name, last_name, datetime_req)
+INSERT INTO Doctor
+  (firstName, lastName, email, orgName, telephone, addressOne, addressTwo, description)
 VALUES
-  ("Lorem", "Ipsum", "2020-11-15 10:10:10"),
-  ("Dolor", "Amet", "2020-12-15 09:10:10"),
-  ("Consectetur", "Sed", "2020-11-25 07:10:10");
+  ("Edward", "Steel", "esteel@gmail.com", "STEEL CHIROPRACTIC CLINIC P.A.", "704-563-5001", "1409 PIERSON DR", "", "Chiropractor Sports Physician"),
+  ("Matthew", "Hargreaves", "mhargreaves@gmail.com", "CAROLINA'S SPINE AND SPORTS TREATMENT CENTER, PLLC", "617-699-8541", "100 N TRYON ST", "", "Chiropractor Sports Physicia"),
+  ("Arnie", "Wynn", "awynn@gmail.com", "", "704-299-1700", "1128 KURT CT", "", "Chiropractor Sports Physician"),
+  ("Jeffrey", "Atlas", "jAtlas@gmail.com", "", "910-742-9243", "3205 RANDALL PKWY", "SUITE 105", "Psychologist Clinical"),
+  ("Edward", "Hughes", "eHuges@gmail.com", "", "704-879-9273", "1307 UNION RD", "SUITE 105", "Psychologist Clinical" );
 
-
-INSERT INTO selected_doctors
-  (first_name, last_name, specialties, insurance)
+INSERT INTO Schedule
+  (firstName, lastName, email, datetime)
 VALUES
-("Lorem",
-"Ipsum",
-"primary care", "United Healthcare"
-),
-("Dolor", "Amet", "psychiatrist", "Aetna"),
-("Consectetur", "Finibus", "psychologist", "1199 SEIU");
+  ("Edward", "Steel", "esteel@gmail.com", "November 6, 2020"),
+  ("Matthew", "Hargreaves", "mhargreaves@gmail.com", "November 7, 2020"),
+  ("Arnie", "Wynn", "awynn@gmail.com", "November 8, 2020");
 
   

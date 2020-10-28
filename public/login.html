@@ -5,34 +5,45 @@
   <title>Passport Authentication Login</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css"> -->
-  <link href="stylesheets/css.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  <link href="stylesheets/index.css" rel="stylesheet">
 </head>
 
 <body>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-      </div>
+  <div class="hero is-medium is-dark">
+    <div class="hero-body">
+      <h1 class="title is-1">
+        Doctor's Connect
+      </h1>
     </div>
+  </div>
+  <nav class="breadcrumb is-centered is-medium" aria-label="breadcrumbs">
+    <ul>
+      <li><a href="index.html">About Us</a></li>
+      <li class="is-active"><a href="login.html" aria-current="page">Log In</a></li>
+      <li><a href="search.html">Search</a></li>
+      <li><a href="#">Schedule</a></li>
+    </ul>
   </nav>
-  <div class="container">
-    <div class="row">
+  <div class="field">
+    <div class="row2">
       <div class="col-md-6 col-md-offset-3">
-        <h2>Login Form</h2>
+        <h2 class="title is-3 text">Login Form</h2>
         <form class="login">
           <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="email-input" placeholder="Email">
+            <label class="label text" for="exampleInputEmail1">Email address</label>
+            <input type="email" class="input" id="email-input" placeholder="Email input">
           </div>
           <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="password-input" placeholder="Password">
+            <label class="label text" for="exampleInputPassword1">Password</label>
+            <input type="password" class="input" id="password-input" placeholder="Password">
           </div>
-          <button type="submit" class="btn btn-default">Login</button>
+          <button type="submit" class="button is-dark is-medium">
+            Login
+          </button>
         </form>
         <br />
-        <p>Or sign up <a href="signup.html">here</a></p>
+        <p class="subtitle is-6 text">Or sign up <a href="signup.html">here</a></p>
       </div>
     </div>
   </div>
@@ -41,5 +52,13 @@
   <script type="text/javascript" src="js/login.js"></script>
 
 </body>
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong>Doctor's Connect</strong> by <a href="#">Jesse</a>, <a href="#">Taylor</a>, and <a href="#">Tristan</a>.
+    </p>
+  </div>
+</footer>
 
 </html>
