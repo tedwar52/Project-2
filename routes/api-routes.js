@@ -28,6 +28,7 @@ module.exports = function (app) {
       password: req.body.password
     })
       .then(() => {
+
         res.redirect(307, "/api/login");
       })
       .catch(err => {
@@ -59,20 +60,61 @@ module.exports = function (app) {
     }
   });
 
-  app.get("/api/users", function (req, res) {
-    console.log("testApiUsers");
+  // app.get("/api/users", function (req, res) {
+  //   console.log("testApiUsers");
 
-  });
+  // });
 
-  app.get("/api/doctors", function (req, res) {
-    console.log("testApiDoctors")
+  // app.get("/api/doctors", function (req, res) {
+  //   console.log("testApiDoctors")
+  //   console.log(req.body)
+  //   db.Doctor.findAll()
+  //     .then(function (dbDoctor) {
+  //       console.log(dbDoctor);
+  //       // res.json(dbDoctor);
+  //     });
 
-  });
+  // });
 
   app.get("/api/schedules", function (req, res) {
     console.log("testApiSchedules")
 
   });
 
+  app.get("/api/doctor_data/:userData?", function (req, res) {
+    console.log("testApiDoctor_Data")
+    console.log(req.params.orgName)
+    console.log(req.params)
+
+    db.Doctor.findAll({
+      where: {
+        orgName: '%' + req.params.query + '%'
+      }
+    })
+      .then(function (dbDoctor) {
+        res.json(dbDoctor);
+      }).catch(function (error) {
+        console.log(error);
+      });
+  });
+
+
+  // app.get("/api/doctor_data", (req, res) => {
+  //   // console.log(req.body)
+  //   console.log("testApiDoctorData_body")
+  //   if (!req.doctor) {
+  //     // The user is not logged in, send back an empty object
+  //     res.json({});
+  //   } else {
+  //     // Otherwise send back the user's email and id
+  //     // Sending back a password, even a hashed password, isn't a good idea
+  //     res.json({
+
+  //       firstName: req.doctor.firstName,
+  //       id: req.doctor.id
+  //     });
+  //     console.log("testJSONResponse");
+  //   }
+  // });
 
 };
