@@ -1,0 +1,69 @@
+
+@charset "utf-8";
+//@import "../node_modules/bulma/bulma.sass";
+
+//color wheel
+$blue: #16c2d5;
+$light-blue: #89dee2;
+$dark-blue: #10217d;
+$grey: #527c88;
+$pink: #d7baad;
+$dark-grey: #2e4450;
+$light-grey: purple;
+
+//changing bulma color/text defaults
+$family-sans-serif: "Lato", sans-serif;
+$color-primary: $light-blue;
+$color-secondary: $grey;
+$body-background-color: $light-grey;
+
+//breadcrumb&buttons
+$link-hover-color: $pink;
+$link-hover-border-color: $pink;
+$button-border-width: 5px;
+$border-color: $pink;
+
+/*starter code*/
+form.signup,
+form.login,
+form.search {
+  margin-top: 50px; }
+
+/*general formatting*/
+.body{
+    $body-background-color: $light-grey;
+}
+.container{
+    background-color: $color-secondary;
+    padding: 10px;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+}
+.row {
+  background-color: $dark-grey;
+  padding: 10px;
+  height: 300px;
+  margin: 25px;
+}
+.box {
+    background-color: $color-primary;
+    padding: 10px;
+    margin: 5px; 
+    height: 260px;
+}
+.label {
+    $text-color: $white;
+}
+
+  
+
+
+
+
+
+//import
+//@import "../node_modules/bulma/sass/elements/box.sass";
+//@import "../node_modules/bulma/sass/elements/button.sass";
