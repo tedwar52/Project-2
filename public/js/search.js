@@ -11,14 +11,14 @@ $(document).ready(() => {
             search2: criteria2.val().trim(),
             search3: criteria3.val().trim()
         };
-
+        doctorSearch;
     });
 
     // var categoryString = category || "";
     // if (categoryString) {
     //     categoryString = "/category/" + categoryString;
     // }
-    $.get("/api/doctor_data", function (data) {
+    let doctorSearch = $.get("/api/doctor_data", function (data) {
         console.log("Doctors", data);
         doctors = data;
         if (!doctors || !doctors.length) {
@@ -28,9 +28,6 @@ $(document).ready(() => {
             initializeRows();
         }
     });
-
-
-    // getPosts();
 
     var doctorContainer = $(".doctor-container");
     var doctors;
