@@ -7702,22 +7702,30 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem; }
 
+/*starter code*/
 form.signup,
 form.login,
-form.signup {
+form.search {
   margin-top: 50px; }
 
+/*general formatting*/
 .container {
-  background-color: #527c88; }
+  background-color: #527c88;
+  padding: 10px; }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 15px; }
+
+.row {
+  background-color: #2e4450;
+  padding: 10px;
+  height: 300px;
+  margin: 25px; }
 
 .box {
   background-color: #89dee2;
   padding: 10px;
-  height: 200px;
-  margin: 25px; }
-
-.about {
-  background-color: #16c2d5;
-  padding: 5px;
-  height: 75px;
-  margin: 25px; }
+  margin: 5px;
+  height: 260px; }

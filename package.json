@@ -8,7 +8,8 @@
     "start": "node server.js",
     "lint": "eslint --quiet .",
     "fix": "eslint --fix .",
-    "watch": "nodemon server.js"
+    "watch": "nodemon server.js",
+    "sass": "node-sass sass/mystyle.scss public/stylesheets/css.css"
   },
   "keywords": [],
   "author": "",
@@ -26,6 +27,7 @@
     "sequelize": "^5.8.6"
   },
   "devDependencies": {
+    "bulma": "^0.9.1",
     "chai": "^4.1.2",
     "chai-http": "^4.0.0",
     "cross-env": "^5.2.0",
@@ -33,6 +35,7 @@
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-prettier": "^2.6.2",
     "mocha": "^5.2.0",
+    "node-sass": "^4.14.1",
     "prettier": "^1.13.7"
   }
 }
