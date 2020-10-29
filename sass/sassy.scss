@@ -3,13 +3,10 @@
 
 
 //color wheel
-$blue: #16c2d5;
 $light-blue: #89dee2;
-$dark-blue: #10217d;
 $grey: #527c88;
 $pink: #d7baad;
 $dark-grey: #2e4450;
-$light-grey: purple;
 
 //changing bulma color/text defaults
 
@@ -18,14 +15,6 @@ $info: $grey;
 $warning: $dark-grey;
 $light: $pink;
 
-$body-color: $light-grey;
-$container-color: $info;
-
-//breadcrumb&buttons
-$link-hover-color: $pink;
-$link-hover-border-color: $pink;
-$button-border-width: 5px;
-$border-color: $pink;
 
 /*starter code*/
 form.signup,
@@ -56,5 +45,33 @@ form.search {
 #submitBtn {
     margin-top: 10px;
 }
+.hero {
+    &-has-background {
+        position: relative;
+        overflow: hidden;
+    }
+    &-background {
+        position: absolute;
+        object-fit: cover;
+        object-position: center center;
+        width: 100%;
+        height: 100%;
+    }
+    &-is-transparent {
+        opacity: 0.3
+    }
+}
+img {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+      
+    /* Preserve aspet ratio */
+    min-width: 100%;
+    min-height: 100%;
+
+    opacity: 0.2
+  }
+
 
 @import "../node_modules/bulma/bulma.sass";
