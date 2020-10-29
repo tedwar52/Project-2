@@ -54,9 +54,7 @@ CREATE TABLE schedule
     (100),
     last_name VARCHAR
     (100),
-    address_number INT
-    (50),
-    street_name VARCHAR
+    street_address VARCHAR
     (100),
     city VARCHAR
     (100),
