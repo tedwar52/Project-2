@@ -16,11 +16,5 @@ VALUES
   ("Jeffrey", "Atlas", "jAtlas@gmail.com", "", "910-742-9243", "3205 Randall Parkway", "Suite 105", "Psychologist Clinical", now(), now()),
   ("Edward", "Hughes", "eHuges@gmail.com", "", "704-879-9273", "1307 Union Road", "Suite 105", "Psychologist Clinical", now(), now());
 
-INSERT INTO Schedules
-  (firstName, lastName, email, datetime, createdAt, updatedAt)
-VALUES
-  ("Edward", "Steel", "esteel@gmail.com", "November 6, 2020", now(), now()),
-  ("Matthew", "Hargreaves", "mhargreaves@gmail.com", "November 7, 2020", now(), now()),
-  ("Arnie", "Wynn", "awynn@gmail.com", "November 8, 2020", now(), now());
 
   
