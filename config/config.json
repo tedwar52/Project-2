@@ -1,14 +1,14 @@
 {
   "development": {
     "username": "root",
-    "password": "Schecteromen6!",
+    "password": "root",
     "database": "passportdb",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": null,
+    "password": "root",
     "database": "database_test",
     "host": "127.0.0.1",
     "dialect": "mysql"

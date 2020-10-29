@@ -1,39 +1,33 @@
 $(document).ready(() => {
-    const searchForm = $("search.search");
     const criteria1 = $("input#search1");
     const criteria2 = $("input#search2");
     const criteria3 = $("input#search3");
 
-    searchForm.on("submit", event => {
-        console.log("testSubmit1")
+    console.log(criteria1);
+
+    $("#doctorSearch").on("click", function (event) {
         event.preventDefault();
+        console.log("testSubmit1");
         const userData = {
             search1: criteria1.val().trim(),
             search2: criteria2.val().trim(),
             search3: criteria3.val().trim()
         };
-        doctorSearch(userData);
-        console.log("testSubmit2")
+
+        $.get("/api/doctor_data/" + userData.search1, function (data) {
+            console.log("testDescription");
+            console.log(userData.search1);
+            console.log("Doctors", data);
+            doctors = data;
+            if (!doctors || !doctors.length) {
+                displayEmpty();
+            }
+            else {
+                initializeRows();
+            }
+        });
     });
 
-    // var categoryString = category || "";
-    // if (categoryString) {
-    //     categoryString = "/category/" + categoryString;
-    // }
-    let doctorSearch = (userData) => $.get("/api/doctor_data/" + userData.search1, function (data) {
-
-        console.log("testDescription");
-        console.log(userData.search1);
-        console.log("Doctors", data);
-
-        doctors = data;
-        if (!doctors || !doctors.length) {
-            displayEmpty();
-        }
-        else {
-            initializeRows();
-        }
-    });
 
     var doctorContainer = $(".doctor-container");
     var doctors;
@@ -55,9 +49,6 @@ $(document).ready(() => {
         newPostCard.addClass("card");
         var newPostCardHeading = $("<div>");
         newPostCardHeading.addClass("card-header");
-        // var deleteBtn = $("<button>");
-        // deleteBtn.text("x");
-        // deleteBtn.addClass("delete btn btn-danger");
         var editBtn = $("<button>");
         editBtn.text("Schedule Meeting");
         editBtn.addClass("edit btn btn-default");
@@ -83,10 +74,8 @@ $(document).ready(() => {
         newPostTitle.text(doctor.firstName + " " + doctor.lastName + "  ");
         newPostBody.text(doctor.addressOne + " " + doctor.addressTwo + " " + doctor.telephone);
         var formattedDate = doctor.orgName;
-        // formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
         newPostDate.text(formattedDate);
         newPostTitle.append(newPostDate);
-        // newPostCardHeading.append(deleteBtn);
         newPostCardHeading.append(editBtn);
         newPostCardHeading.append(newPostTitle);
         newPostCardHeading.append(newPostCategory);

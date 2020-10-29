@@ -48,16 +48,27 @@ USE passportdb;
 
 CREATE TABLE schedule
 (
-    id INT NOT NULL AUTO_INCREMENT,
-    first_name VARCHAR(100),
-    last_name VARCHAR(100),
-    address_number INT(50),
-    street_name VARCHAR(100),
-    city VARCHAR(100),
-    state VARCHAR(100),
-    zip_code INT(10),
-    app_time INT(10),
-    PRIMARY KEY(id)
+    id INT NOT NULL
+    AUTO_INCREMENT,
+    first_name VARCHAR
+    (100),
+    last_name VARCHAR
+    (100),
+    address_number INT
+    (50),
+    street_name VARCHAR
+    (100),
+    city VARCHAR
+    (100),
+    state VARCHAR
+    (100),
+    zip_code INT
+    (10),
+    app_time INT
+    (10),
+    PRIMARY KEY
+    (id)
 );
 
-        SELECT * FROM schedule;
+    SELECT *
+    FROM schedule;
