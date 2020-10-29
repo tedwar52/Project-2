@@ -1,5 +1,6 @@
 /*! bulma.io v0.9.1 | MIT License | github.com/jgthms/bulma */
 /* Bulma Utilities */
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 @keyframes spinAround {
   from {
     transform: rotate(0deg); }
