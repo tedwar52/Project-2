@@ -70,7 +70,7 @@ module.exports = function (app) {
   app.get("/api/doctor_data/:userData?", function (req, res) {
     db.Doctor.findAll({
       where: {
-        orgName: {
+        description: {
           [Op.like]: '%' + req.params.userData + '%'
         }
       }
