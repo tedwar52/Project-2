@@ -1,6 +1,8 @@
 // Requiring our models and passport as we've configured it
 const db = require("../models");
 const passport = require("../config/passport");
+const Sequelize = require('sequelize');
+const Op = Sequelize.Op;
 
 module.exports = function (app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -28,6 +30,7 @@ module.exports = function (app) {
       password: req.body.password
     })
       .then(() => {
+
         res.redirect(307, "/api/login");
       })
       .catch(err => {
@@ -59,20 +62,23 @@ module.exports = function (app) {
     }
   });
 
-  app.get("/api/users", function (req, res) {
-    console.log("testApiUsers");
-
-  });
-
-  app.get("/api/doctors", function (req, res) {
-    console.log("testApiDoctors")
-
-  });
-
   app.get("/api/schedules", function (req, res) {
     console.log("testApiSchedules")
 
   });
 
-
+  app.get("/api/doctor_data/:userData?", function (req, res) {
+    db.Doctor.findAll({
+      where: {
+        orgName: {
+          [Op.like]: '%' + req.params.userData + '%'
+        }
+      }
+    })
+      .then(function (dbDoctor) {
+        res.json(dbDoctor);
+      }).catch(function (error) {
+        console.log(error);
+      });
+  });
 };

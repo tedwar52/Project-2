@@ -1,0 +1,68 @@
+@charset "utf-8";
+@import "../node_modules/bulma/sass/utilities/initial-variables.sass";
+
+
+//color wheel
+$light-blue: #89dee2;
+$grey: #527c88;
+$pink: #d7baad;
+$dark-grey: #2e4450;
+
+//changing bulma color/text defaults
+
+$primary: $light-blue;
+$info: $grey;
+$warning: $dark-grey;
+$light: $pink;
+
+
+/*starter code*/
+form.signup,
+form.login,
+form.search {
+  margin-top: 50px; }
+
+/*general formatting*/
+.container{
+    padding:10px;
+    margin: 25px;
+    $background-color: $grey;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+    margin: 10px;
+}
+.box {
+    padding: 10px;
+    margin: 5px; 
+    height: 250px;
+}
+.notification {
+    margin: 25px;
+}
+#submitBtn {
+    margin-top: 10px;
+}
+img {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+      
+    /* Preserve aspet ratio */
+    min-width: 100%;
+    min-height: 100%;
+
+    opacity: 0.2
+background-image: url("../assets/banner.jpg") no-repeat center center fixed;  
+}
+  .background {
+    background-image: url("../assets/banner.jpg") no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+  }
+
+
+@import "../node_modules/bulma/bulma.sass";

@@ -5,23 +5,29 @@
   <title>Passport Authentication Members</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
-  <link href="stylesheets/style.css" rel="stylesheet">
+  <link href="stylesheets/index.css" rel="stylesheet">
   <style>
   </style>
 </head>
 
 <body>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="/logout">
-          Logout
-        </a>
-      </div>
+  <!--<img class="is-transparent" src="../assets/banner.jpg" alt="doctors in masks"> -->
+  <div class="hero is-medium is-dark">
+    <div class="hero-body">
+      <h1 class="title is-1">
+        Doctor's Connect
+      </h1>
     </div>
+  </div>
+  <nav class="breadcrumb is-centered is-medium" aria-label="breadcrumbs">
+    <ul>
+      <li><a href="index.html">About Us</a></li>
+      <li><a href="search.html">Search</a></li>
+      <li><a href="schedule.html">Scheduled Appointments</a></li>
+      <li><a href="/logout">Log Out</a></li>
+    </ul>
   </nav>
-  <div class="container">
+  <div class="container notification is-info has-text-centered">
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <h2>Welcome <span class="member-name"></span></h2>
@@ -30,7 +36,8 @@
     </div>
     <div class="row">
       <div>
-        <a href="search.html"><button type="search" class="btn btn-default">Start Searching</button></a>
+        <a href="search.html"><button type="search" class="button is-dark is-medium is-center">Start
+            Searching</button></a>
       </div>
     </div>
   </div>
@@ -41,7 +48,8 @@
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <strong>Doctor's Connect</strong> by <a href="#">Jesse</a>, <a href="#">Taylor</a>, and <a href="#">Tristan</a>.
+        <strong>Doctor's Connect</strong> by <a href="https://github.com/jesseziros">Jesse</a>, <a
+          href="https://github.com/tedwar52">Taylor</a>, and <a href="https://github.com/teastman201">Tristan</a>.
       </p>
     </div>
   </footer>

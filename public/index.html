@@ -5,12 +5,16 @@
     <title>Passport Authentication</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"> -->
-    <link href="stylesheets/css.css" rel="stylesheet">
+    <link href="stylesheets/index.css" rel="stylesheet">
 </head>
 
 <body>
-    <div class="hero is-medium is-dark">
+    <div>
+        <div class="background">
+
+        </div>
+    </div>
+    <div class="hero is-medium is-dark has-image">
         <div class="hero-body">
             <h1 class="title is-1">
                 Doctor's Connect
@@ -20,33 +24,37 @@
     <nav class="breadcrumb is-centered is-medium" aria-label="breadcrumbs">
         <ul>
             <li class="is-active"><a href="#" aria-current="page">About Us</a></li>
-            <li><a href="login.html">Log In</a></li>
             <li><a href="search.html">Search</a></li>
-            <li><a href="#">Schedule</a></li>
+            <li><a href="schedule.html">Scheduled Appointments</a></li>
+            <li><a href="/logout">Log Out</a></li>
         </ul>
     </nav>
+
     <div class="container">
-        <div class="row grid-container">
+        <div class="row grid-container notification is-warning">
             <div class="col-4">
-                <div class="grid-child box">
+                <div class="grid-child box notification is-primary">
                     <p class="subtitle is-5">
-                        Offer the best diagnosis for your patient by finding other health care professionals across the
+                        Offer the best diagnosis for your patient by finding other health care professionals
+                        across the
                         country to confer with!
                     </p>
                 </div>
             </div>
             <div class="col-4">
-                <div class="grid-child box">
+                <div class="grid-child box notification is-primary">
                     <p class="subtitle is-5">
-                        Get answers quickly. Utilize our scheduling feature to talk with other doctors as soon as
+                        Get answers quickly. Utilize our scheduling feature to talk with other doctors as soon
+                        as
                         possible!
                     </p>
                 </div>
             </div>
             <div class="col-4">
-                <div class="grid-child box">
+                <div class="grid-child box notification is-primary">
                     <p class="subtitle is-5">
-                        Keep calm and safe. Our log in is secure so that our database only includes other healthcare
+                        Keep calm and safe. Our log in is secure so that our database only includes other
+                        healthcare
                         professionals!
                     </p>
                 </div>
@@ -61,14 +69,20 @@
             </div>
         </div>
 
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </div>
+
+    <div>
+        <!-- <img class="is-transparent" src="../assets/banner2.jpg" alt="doctors in masks"> -->
     </div>
 
     <footer class="footer">
         <div class="content has-text-centered">
             <p>
-                <strong>Doctor's Connect</strong> by <a href="#">Jesse</a>, <a href="#">Taylor</a>, and <a
-                    href="#">Tristan</a>.
+                <strong>Doctor's Connect</strong> by <a href="https://github.com/jesseziros">Jesse</a>, <a
+                    href="https://github.com/tedwar52">Taylor</a>, and <a
+                    href="https://github.com/teastman201">Tristan</a>.
             </p>
         </div>
     </footer>

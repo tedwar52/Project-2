@@ -11,7 +11,11 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: true
     },
-    organizationName: {
+    email: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    orgName: {
       type: DataTypes.STRING,
       allowNull: true
     },
@@ -27,19 +31,7 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: true
     },
-    city: {
-      type: DataTypes.STRING,
-      allowNull: true
-    },
-    state: {
-      type: DataTypes.STRING,
-      allowNull: true
-    },
-    taxonomyDescription: {
-      type: DataTypes.STRING,
-      allowNull: true
-    },
-    taxonmyLicesnse: {
+    description: {
       type: DataTypes.STRING,
       allowNull: true
     }
