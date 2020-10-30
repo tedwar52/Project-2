@@ -42,8 +42,11 @@ form.search {
 .notification {
     margin: 25px;
 }
-#submitBtn {
+#submitBtn,
+#doctorSearch,
+#saveAppointment {
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 img {
     position: fixed; 
