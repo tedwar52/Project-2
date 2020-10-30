@@ -25,23 +25,44 @@ $(document).ready(() => {
             else {
                 initializeRows();
             }
+            $(".doctor-container").on("click", ".edit", function (event) {
+                event.preventDefault();
+
+                console.log("testSubmit1");
+                // const scheduleData = {
+                //     firstName: doctor.firstName
+                //     // doctor data from corresponding schedule meeting button row
+                //     // need id to pass to backend
+                //     // console.log(event)
+                // };
+                // console.log(scheduleData);
+
+                $.get("/api/doctor_data/", function (data) {
+                    console.log("testData")
+                    console.log(doctors.firstName)
+
+                    // display selected data on /api/schedule.html
+                });
+            });
         });
     });
 
-    $(".doctor-container").on("click", ".edit", function (event) {
-        event.preventDefault();
-        console.log("testSubmit1");
-        const scheduleData = {
-            // doctor data from corresponding schedule meeting button row
-            // need id to pass to backend
-            // console.log(event)
-        };
+    // $(".doctor-container").on("click", ".edit", function (event) {
+    //     event.preventDefault();
+    //     console.log("testSubmit1");
+    //     const scheduleData = {
+    //         firstName: doctor.firstName
+    //         // doctor data from corresponding schedule meeting button row
+    //         // need id to pass to backend
+    //         // console.log(event)
+    //     };
+    //     console.log(scheduleData);
 
-        $.get("/api/doctor_data/" + scheduleData.id, function (data) {
-            console.log(data)
-            // display selected data on /api/schedule.html
-        });
-    });
+    //     $.get("/api/doctor_data/" + scheduleData.id, function (data) {
+    //         console.log(data)
+    //         // display selected data on /api/schedule.html
+    //     });
+    // });
 
     var doctorContainer = $(".doctor-container");
     var doctors;
@@ -67,10 +88,11 @@ $(document).ready(() => {
               <td>${doctor.email}</td>
               <td>${doctor.orgName}</td>
               <td>${doctor.description}</td>
-              <td><span class="icon">
-            <i class="fas fa-calendar-check"></i>
+              <td><span><button type="submit" class="button is-dark is-medium icon" id="doctorSearch"><i class="fas fa-calendar-check"></i></button>            
         </span></td> 
             </tr>`;
+
+
 
 
         // console.log('testCreateNewRow')
