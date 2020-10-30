@@ -81,24 +81,23 @@ module.exports = function (app) {
         console.log(error);
       });
   });
-  app.post("/api/appointment", (req, res) => {
-    console.log("testPost"),
-      console.log(req.body);
+
+  // what does it mean sending back? 
+  app.post("/api/doctor_schedule/:rowId?", function (req, res) {
     db.Schedule.create({
       firstName: req.body.firstName,
       lastName: req.body.lastName,
-      streetAddress: req.body.streetAddress,
-      city: req.body.city,
-      state: req.body.state,
-      zipCode: req.body.zipCode,
-      appTime: req.body.appTime,
+      phone: req.body.phone,
+      email: req.body.email
     })
-      .then((result) => {
-
-        res.send(result);
+      .then(() => {
+        // redirect to scheduled appoitments page?
+        // res.redirect(307, "/api/schedule_appts");
+        console.log("it worked")
       })
       .catch(err => {
         res.status(401).json(err);
       });
   });
+
 };
