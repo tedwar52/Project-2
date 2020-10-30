@@ -81,4 +81,24 @@ module.exports = function (app) {
         console.log(error);
       });
   });
+  app.post("/api/appointment", (req, res) => {
+    console.log("testPost"),
+      console.log(req.body);
+    db.Schedule.create({
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      streetAddress: req.body.streetAddress,
+      city: req.body.city,
+      state: req.body.state,
+      zipCode: req.body.zipCode,
+      appTime: req.body.appTime,
+    })
+      .then((result) => {
+
+        res.send(result);
+      })
+      .catch(err => {
+        res.status(401).json(err);
+      });
+  });
 };
