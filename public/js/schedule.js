@@ -25,7 +25,7 @@ $(document).ready(() => {
       input6: zipCode.val().trim(),
       input7: appTime.val().trim()
     }
-    log(addData);
+    log(appData);
 
   })
 
