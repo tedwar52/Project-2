@@ -31,31 +31,23 @@ $(document).ready(() => {
                 console.log("testSubmit1");
 
                 $.get("/api/doctor_data/", function (data) {
-                    console.log("testData")
-                    console.log(doctors.firstName)
+                    console.log("testData");
+                    console.log("doctors: ", doctors);
+                    console.log(doctors[1].firstName);
 
-                    // display selected data on /api/schedule.html
+                    for (var i = 0; i < doctors.length; i++) {
+
+                        if (doctors[i].id === doctors.id) {
+                            console.log(doctors[i].id);
+                        }
+                        else {
+                            console.log('its not working');
+                        }
+                    }
                 });
             });
         });
     });
-
-    // $(".doctor-container").on("click", ".edit", function (event) {
-    //     event.preventDefault();
-    //     console.log("testSubmit1");
-    //     const scheduleData = {
-    //         firstName: doctor.firstName
-    //         // doctor data from corresponding schedule meeting button row
-    //         // need id to pass to backend
-    //         // console.log(event)
-    //     };
-    //     console.log(scheduleData);
-
-    //     $.get("/api/doctor_data/" + scheduleData.id, function (data) {
-    //         console.log(data)
-    //         // display selected data on /api/schedule.html
-    //     });
-    // });
 
     var doctorContainer = $(".doctor-container");
     var doctors;
