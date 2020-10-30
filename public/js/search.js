@@ -29,13 +29,6 @@ $(document).ready(() => {
                 event.preventDefault();
 
                 console.log("testSubmit1");
-                // const scheduleData = {
-                //     firstName: doctor.firstName
-                //     // doctor data from corresponding schedule meeting button row
-                //     // need id to pass to backend
-                //     // console.log(event)
-                // };
-                // console.log(scheduleData);
 
                 $.get("/api/doctor_data/", function (data) {
                     console.log("testData")
@@ -91,50 +84,6 @@ $(document).ready(() => {
               <td><span><button type="submit" class="button is-dark is-medium icon" id="doctorSearch"><i class="fas fa-calendar-check"></i></button>            
         </span></td> 
             </tr>`;
-
-
-
-
-        // console.log('testCreateNewRow')
-        // var newPostCard = $("<div>");
-        // newPostCard.addClass("card");
-        // var newPostCardHeading = $("<div>");
-        // newPostCardHeading.addClass("card-header");
-        // var editBtn = $("<button>");
-        // editBtn.text("Schedule Meeting");
-        // editBtn.addClass("edit btn btn-default");
-        // editBtn.css({
-        //     float: "right",
-        //     "font-weight": "700",
-        //     "margin-top":
-        //         "-15px"
-        // });
-        // var newPostTitle = $("<h2>");
-        // var newPostDate = $("<small>");
-        // var newPostCategory = $("<h5>");
-        // newPostCategory.text(doctor.description);
-        // newPostCategory.css({
-        //     float: "right",
-        //     "font-weight": "700",
-        //     "margin-top":
-        //         "-15px"
-        // });
-        // var newPostCardBody = $("<div>");
-        // newPostCardBody.addClass("card-body");
-        // var newPostBody = $("<p>");
-        // newPostTitle.text(doctor.firstName + " " + doctor.lastName + "  ");
-        // newPostBody.text(doctor.addressOne + " " + doctor.addressTwo + " " + doctor.telephone);
-        // var formattedDate = doctor.orgName;
-        // newPostDate.text(formattedDate);
-        // newPostTitle.append(newPostDate);
-        // newPostCardHeading.append(editBtn);
-        // newPostCardHeading.append(newPostTitle);
-        // newPostCardHeading.append(newPostCategory);
-        // newPostCardBody.append(newPostBody);
-        // newPostCard.append(newPostCardHeading);
-        // newPostCard.append(newPostCardBody);
-        // newPostCard.data("post", doctor);
-        // return newPostCard;
     }
 
     // This function displays a message when there are no posts
