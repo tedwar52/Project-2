@@ -1,3 +1,22 @@
+<<<<<<< HEAD
+// const mysql = require('mysql');
+
+// const log = (msg) => console.log(msg)
+
+// const connection = mysql.createConnection({
+//     host: 'localhost',
+//     PORT: 3306,
+//     user: 'root',
+//     password: "root",
+//     database: 'passportdb'
+// });
+
+// connection.connect((err, res) => {
+//     if (err) throw err;
+// })
+
+// log('Its working')
+=======
 const mysql = require('mysql');
 
 const log = (msg) => console.log(msg)
@@ -43,3 +62,4 @@ connection.connect((err, res) => {
   if (err) throw err;
   appScheduler();
 });
+>>>>>>> e4ceb74b20883dcd1f938cbf8833aa77f654f0c8
