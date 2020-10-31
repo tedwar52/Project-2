@@ -1,15 +1,31 @@
-function getQueryStringValue(key) {
-  return decodeURIComponent(window.location.search.replace(new RegExp("^(?:.*[&\\?]" + encodeURIComponent(key).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));
-}
-
 $(document).ready(() => {
-  const doctorId = parseInt(getQueryStringValue("doctorId"))
-  if (!isNaN(doctorId)) {
-    $.get(`api/doctor/${doctorId}`)
-      .then((response) => {
-        console.log(response)
-      })
-  }
+//   const firstName = $("input#appointment1");
+//   const lastName = $("input#appointment2");
+//   const streetAddress = $("input#appointment3");
+//   const city = $("input#appointment4");
+//   const state = $("input#appointment5");
+//   const zipCode = $("input#appointment6");
+//   const appTime = $("input#appointment7");
+
+//   $("#saveAppointment").on("click", (event) => {
+//     event.preventDefault();
+//     const appData = {
+//       firstName: firstName.val().trim(),
+//       lastName: lastName.val().trim(),
+//       streetAddress: streetAddress.val().trim(),
+//       city: city.val().trim(),
+//       state: state.val().trim(),
+//       zipCode: zipCode.val().trim(),
+//       appTime: appTime.val().trim()
+//     };
+//     $.post("/api/appointment", appData)
+//       .then((response) => {
+//         console.log(response)
+        
+//       }).catch(error => {
+//         console.log(error)
+//       })
+//   }
 
   $("#saveAppointment").on("click", (event) => {
     event.preventDefault();
