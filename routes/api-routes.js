@@ -67,6 +67,13 @@ module.exports = function (app) {
 
   });
 
+  app.get("/api/doctor/:id?", function (req, res) {
+    db.Doctor.findByPk(req.params.id)
+      .then(function (doctorInfo) {
+        res.json(doctorInfo);
+      })
+  })
+
   app.get("/api/doctor_data/:userData?", function (req, res) {
     db.Doctor.findAll({
       where: {
@@ -82,7 +89,7 @@ module.exports = function (app) {
       });
   });
 
-  // what does it mean sending back? 
+
   app.post("/api/doctor_schedule/:rowId?", function (req, res) {
     db.Schedule.create({
       firstName: req.body.firstName,

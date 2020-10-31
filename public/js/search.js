@@ -27,9 +27,12 @@ $(document).ready(() => {
             }
             $(".doctor-container").on("click", ".edit", function (event) {
                 event.preventDefault();
-                let rowId = event.currentTarget.rowIndex
+                let rowId = event.currentTarget.rowIndex;
+                console.log(event.currentTarget);
+                let payload = { firstName: "" };
 
-                $.get("/api/doctor_schedule/" + rowId, function (data) {
+
+                $.post("/api/doctor_schedule/" + rowId, payload, function (data) {
 
                     for (var i = 0; i < doctors.length; i++) {
 
@@ -68,9 +71,8 @@ $(document).ready(() => {
               <td>${doctor.telephone}</td>
               <td>${doctor.email}</td>
               <td>${doctor.orgName}</td>
-              <td>${doctor.description}</td>
-              <td><span><button type="submit" class="button is-dark is-medium icon" id="doctorSearch"><i class="fas fa-calendar-check"></i></button>            
-        </span></td> 
+              <td>${doctor.description}</td>              
+              <td><span><a href="schedule.html?doctorId=${doctor.id}"><button type="submit" class="button is-dark is-medium icon" id="doctorSearch"><i class="fas fa-calendar-check"></i></button></a></span></td> 
             </tr>`;
     }
 
