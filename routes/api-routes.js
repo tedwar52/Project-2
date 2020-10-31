@@ -67,6 +67,13 @@ module.exports = function (app) {
 
   });
 
+  app.get("/api/doctor/:id?", function (req, res) {
+    db.Doctor.findByPk(req.params.id)
+      .then(function (doctorInfo) {
+        res.json(doctorInfo);
+      })
+  })
+
   app.get("/api/doctor_data/:userData?", function (req, res) {
     db.Doctor.findAll({
       where: {
@@ -81,24 +88,23 @@ module.exports = function (app) {
         console.log(error);
       });
   });
-  app.post("/api/appointment", (req, res) => {
-    console.log("testPost"),
-      console.log(req.body);
+
+
+  app.post("/api/doctor_schedule/:rowId?", function (req, res) {
     db.Schedule.create({
       firstName: req.body.firstName,
       lastName: req.body.lastName,
-      streetAddress: req.body.streetAddress,
-      city: req.body.city,
-      state: req.body.state,
-      zipCode: req.body.zipCode,
-      appTime: req.body.appTime,
+      phone: req.body.phone,
+      email: req.body.email
     })
-      .then((result) => {
-
-        res.send(result);
+      .then(() => {
+        // redirect to scheduled appoitments page?
+        // res.redirect(307, "/api/schedule_appts");
+        console.log("it worked")
       })
       .catch(err => {
         res.status(401).json(err);
       });
   });
+
 };

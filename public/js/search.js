@@ -27,18 +27,17 @@ $(document).ready(() => {
             }
             $(".doctor-container").on("click", ".edit", function (event) {
                 event.preventDefault();
+                let rowId = event.currentTarget.rowIndex;
+                console.log(event.currentTarget);
+                let payload = { firstName: "" };
 
-                console.log("testSubmit1");
 
-                $.get("/api/doctor_data/", function (data) {
-                    console.log("testData");
-                    console.log("doctors: ", doctors);
-                    console.log(doctors[1].firstName);
+                $.post("/api/doctor_schedule/" + rowId, payload, function (data) {
 
                     for (var i = 0; i < doctors.length; i++) {
 
-                        if (doctors[i].id === doctors.id) {
-                            console.log(doctors[i].id);
+                        if (doctors[i].id === rowId) {
+                            console.log("found it!");
                         }
                         else {
                             console.log('its not working');
@@ -72,9 +71,8 @@ $(document).ready(() => {
               <td>${doctor.telephone}</td>
               <td>${doctor.email}</td>
               <td>${doctor.orgName}</td>
-              <td>${doctor.description}</td>
-              <td><span><button type="submit" class="button is-dark is-medium icon" id="doctorSearch"><i class="fas fa-calendar-check"></i></button>            
-        </span></td> 
+              <td>${doctor.description}</td>              
+              <td><span><a href="schedule.html?doctorId=${doctor.id}"><button type="submit" class="button is-dark is-medium icon" id="doctorSearch"><i class="fas fa-calendar-check"></i></button></a></span></td> 
             </tr>`;
     }
 
