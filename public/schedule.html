@@ -33,65 +33,58 @@
 
         </div>
         </table>
-        <form class="appointment">
+        <form class="search">
           <div class="form-group">
             <label class="label text" for="exampleInputfirstName1">First Name</label>
-            <input class="input" id="appointment1">
+            <input class="input" id="search1" placeholder="Search">
           </div>
           <div class="form-group">
             <label class="label text" for="exampleInputlastName1">Last Name</label>
-            <input class="input" id="appointment2">
+            <input class="input" id="search2" placeholder="Search">
           </div>
           <div class="form-group">
             <label class="label text" for="exampleInputstreetAddress1">Street Address</label>
-            <input class="input" id="appointment3">
+            <input class="input" id="search3" placeholder="Search">
           </div>
           <div class="form-group">
             <label class="label text" for="exampleInputcity1">City</label>
-            <input class="input" id="appointment4">
+            <input class="input" id="search4" placeholder="Search">
           </div>
           <div class="form-group">
             <label class="label text" for="exampleInputstate1">State</label>
-            <input class="input" id="appointment5">
+            <input class="input" id="search5" placeholder="Search">
           </div>
           <div class="form-group">
             <label class="label text" for="exampleInputzipCode1">Zip Code</label>
-            <input class="input" id="appointment6">
+            <input class="input" id="search6" placeholder="Search">
           </div>
           <div class="form-group">
             <label class="label text" for="exampleInputappTime1">Appointment Time</label>
-            <input class="input" id="appointment7">
+            <input class="input" id="search7" placeholder="Search">
           </div>
           <button type="submit" class="button is-dark is-medium" id="saveAppointment">Save Appointment!</button>
         </form>
-      </div>
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-          <h2>Appointments<span class="createdAppointments"></span></h2>
-          <br />
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12 ">
-          <table class="table">
-            <thead>
-              <tr>
-                <th>First Name</th>
-                <th>Last</th>
-                <th>Street Address</th>
-                <th>City</th>
-                <th>State</th>
-                <th>Zip Code</th>
-                <th>Appointment Time</th>
-              </tr>
-            </thead>
-            <tbody class="appointmentSet">
+        <div class="row">
+          <div class="col-md-12 ">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Address</th>
+                  <th>Phone</th>
+                  <th>Email</th>
+                  <th>Organization</th>
+                  <th>Description</th>
+                  <th>Schedule</th>
+                </tr>
+              </thead>
+              <tbody class="doctor-container">
 
-            </tbody>
-          </table>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
-    </div>
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script type="text/javascript" src="js/appointment.js"></script>
