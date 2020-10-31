@@ -42,8 +42,11 @@ form.search {
 .notification {
     margin: 25px;
 }
-#submitBtn {
+#submitBtn,
+#doctorSearch,
+#saveAppointment {
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 img {
     position: fixed; 
@@ -57,6 +60,7 @@ img {
     opacity: 0.2
 
 }
+
   .background {
     background-image: url("../assets/banner.jpg") no-repeat center center fixed;
     background-size: cover;
