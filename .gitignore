@@ -3,3 +3,5 @@ node_modules/
 .DS_Store
 /config/config.json
 notes.txt
+presentation.pptx
+~$presentation.pptx
