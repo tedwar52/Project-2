@@ -70,7 +70,7 @@ module.exports = function (app) {
   app.get("/api/doctor_data/:userData?", function (req, res) {
     db.Doctor.findAll({
       where: {
-        description: {
+        orgName: {
           [Op.like]: '%' + req.params.userData + '%'
         }
       }
@@ -81,7 +81,6 @@ module.exports = function (app) {
         console.log(error);
       });
   });
-
   app.post("/api/appointment", (req, res) => {
     console.log("testPost"),
       console.log(req.body);
