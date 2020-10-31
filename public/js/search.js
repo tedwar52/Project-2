@@ -21,7 +21,7 @@ $(document).ready(() => {
             }
             $(".doctor-container").on("click", ".edit", function (event) {
                 event.preventDefault();
-
+                window.location.href = "schedule.html";
             });
         });
     });
@@ -50,9 +50,10 @@ $(document).ready(() => {
               <td>${doctor.email}</td>
               <td>${doctor.orgName}</td>
               <td>${doctor.description}</td>              
-              <td><a href="schedule.html"><button type="submit" class="button is-dark is-medium icon" id="doctorSearch"><i class="fas fa-calendar-check"></i></button></a></td> 
+              <td><a href="/schedule.html"><button type="submit" class="button is-dark is-medium icon" id="doctorSearch"><i class="fas fa-calendar-check"></i></button></a></td> 
             </tr>`;
     }
+
 
     // This function displays a message when there are no posts
     function displayEmpty() {

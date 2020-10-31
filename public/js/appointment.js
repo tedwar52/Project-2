@@ -37,5 +37,34 @@ $(document).ready(() => {
       }).catch(error => {
         console.log(error)
       })
+    initializeRows();
   });
+  var doctorContainer = $(".doctor-container");
+  var doctors;
+
+  function initializeRows() {
+    doctorContainer.empty();
+    ///doctorsToAdd
+    var doctorsToAddHTML = "";
+    for (var i = 0; i < doctors.length; i++) {
+      //doctorsToAdd.push(createNewRow(doctors[i]));
+      doctorsToAddHTML += createNewRow(doctors[i])
+    }
+    doctorContainer.append(doctorsToAddHTML);
+  }
+
+  // This function constructs a post's HTML
+  function createNewRow(doctor) {
+    console.log(doctor)
+
+    return `<tr class="edit" data-docID=${doctor.id}>
+              <td>${doctor.firstName} ${doctor.lastName}</td>
+              <td>${doctor.addressOne} ${doctor.addressTwo}</td>
+              <td>${doctor.telephone}</td>
+              <td>${doctor.email}</td>
+              <td>${doctor.orgName}</td>
+              <td>${doctor.description}</td>              
+              <td><a href="schedule.html"><button type="submit" class="button is-dark is-medium icon" id="doctorSearch"><i class="fas fa-calendar-check"></i></button></a></td> 
+            </tr>`;
+  }
 });
