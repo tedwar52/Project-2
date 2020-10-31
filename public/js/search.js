@@ -1,24 +1,18 @@
 $(document).ready(() => {
     const criteria1 = $("input#search1");
-    const criteria2 = $("input#search2");
-    const criteria3 = $("input#search3");
-
-    // console.log(criteria1);
 
     $("#doctorSearch").on("click", function (event) {
         event.preventDefault();
         console.log("testSubmit1");
         const userData = {
             search1: criteria1.val().trim(),
-            search2: criteria2.val().trim(),
-            search3: criteria3.val().trim()
         };
 
         $.get("/api/doctor_data/" + userData.search1, function (data) {
-            console.log("testDescription");
-            console.log(userData.search1);
-            console.log("Doctors", data[1]);
             doctors = data;
+
+            console.log("testDescription");
+
             if (!doctors || !doctors.length) {
                 displayEmpty();
             }
@@ -27,23 +21,7 @@ $(document).ready(() => {
             }
             $(".doctor-container").on("click", ".edit", function (event) {
                 event.preventDefault();
-                let rowId = event.currentTarget.rowIndex;
-                console.log(event.currentTarget);
-                let payload = { firstName: "" };
-
-
-                $.post("/api/doctor_schedule/" + rowId, payload, function (data) {
-
-                    for (var i = 0; i < doctors.length; i++) {
-
-                        if (doctors[i].id === rowId) {
-                            console.log("found it!");
-                        }
-                        else {
-                            console.log('its not working');
-                        }
-                    }
-                });
+                window.location.href = "schedule.html";
             });
         });
     });
@@ -72,9 +50,10 @@ $(document).ready(() => {
               <td>${doctor.email}</td>
               <td>${doctor.orgName}</td>
               <td>${doctor.description}</td>              
-              <td><span><a href="schedule.html?doctorId=${doctor.id}"><button type="submit" class="button is-dark is-medium icon" id="doctorSearch"><i class="fas fa-calendar-check"></i></button></a></span></td> 
+              <td><a href="/appointment.html"><button type="submit" class="button is-dark is-medium icon" id="doctorSearch"><i class="fas fa-calendar-check"></i></button></a></td> 
             </tr>`;
     }
+
 
     // This function displays a message when there are no posts
     function displayEmpty() {
