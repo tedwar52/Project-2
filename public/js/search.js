@@ -50,7 +50,7 @@ $(document).ready(() => {
               <td>${doctor.email}</td>
               <td>${doctor.orgName}</td>
               <td>${doctor.description}</td>              
-              <td><a href="/schedule.html"><button type="submit" class="button is-dark is-medium icon" id="doctorSearch"><i class="fas fa-calendar-check"></i></button></a></td> 
+              <td><a href="/appointment.html"><button type="submit" class="button is-dark is-medium icon" id="doctorSearch"><i class="fas fa-calendar-check"></i></button></a></td> 
             </tr>`;
     }
 
