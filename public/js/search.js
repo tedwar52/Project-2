@@ -11,7 +11,7 @@ $(document).ready(() => {
         $.get("/api/doctor_data/" + userData.search1, function (data) {
             doctors = data;
 
-            console.log("testDescription");
+            console.log(doctors);
 
             if (!doctors || !doctors.length) {
                 displayEmpty();
@@ -19,10 +19,10 @@ $(document).ready(() => {
             else {
                 initializeRows();
             }
-            $(".doctor-container").on("click", ".edit", function (event) {
-                event.preventDefault();
-                window.location.href = "schedule.html";
-            });
+            // $(".doctor-container").on("click", ".edit", function (event) {
+            //     event.preventDefault();
+            //     window.location.href = "schedule.html";
+            // });
         });
     });
 

@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-    const Schedule = sequelize.define("Schedule", {
+    const Appointment = sequelize.define("Appointment", {
   
       firstName: {
         type: DataTypes.STRING,
@@ -30,10 +30,10 @@ module.exports = function (sequelize, DataTypes) {
         allowNull: true
       }
     });
-    Schedule.associate = function(models) {
-        Schedule.belongsTo(models.User, {
+    Appointment.associate = function(models) {
+        Appointment.belongsTo(models.User, {
           onDelete: "cascade"
         });
       };
-    return Schedule;
+    return Appointment;
   };

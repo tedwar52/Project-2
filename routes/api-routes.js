@@ -62,11 +62,6 @@ module.exports = function (app) {
     }
   });
 
-  app.get("/api/schedules", function (req, res) {
-    console.log("testApiSchedules")
-
-  });
-
   app.get("/api/doctor_data/:userData?", function (req, res) {
     db.Doctor.findAll({
       where: {
@@ -76,7 +71,7 @@ module.exports = function (app) {
       }
     })
       .then(function (dbDoctor) {
-        res.json(dbDoctor);
+        res.send(dbDoctor);
       }).catch(function (error) {
         console.log(error);
       });
@@ -84,7 +79,7 @@ module.exports = function (app) {
   app.post("/api/appointment", (req, res) => {
     console.log("testPost"),
       console.log(req.body);
-    db.Schedule.create({
+    db.Appointment.create({
       firstName: req.body.firstName,
       lastName: req.body.lastName,
       streetAddress: req.body.streetAddress,
@@ -95,7 +90,7 @@ module.exports = function (app) {
     })
       .then((result) => {
 
-        res.send(result);
+        res.send([result]);
       })
       .catch(err => {
         res.status(401).json(err);
